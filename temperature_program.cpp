@@ -5,28 +5,29 @@
 // This program converts celsius to fahrenheit
 
 #include <iostream>
+#include <string>
 
-// note: the style for the function name is following Google's style guide
-//       https://google.github.io/styleguide/cppguide.html#Function_Names
+std::string(celsius);
+float celsiusTemp;
+float fahrenheitTemp;
+
 void fahrenheit() {
-    // calculate area
+    std::cout << "Enter a temperature (°C): ";
+    std::cin >> celsius;
 
-    int temp_celsius;
-    int temp_fahrenheit;
+    std::cout << "\n";
+    try {
+        celsiusTemp = std::stof(celsius);
+        fahrenheitTemp = 9.0 / 5.0 * celsiusTemp + 32;
+        std::cout << celsiusTemp << "°C is equal to "
+                  << fahrenheitTemp << "°F.";
+    } catch (std::invalid_argument) {
+        std::cout << "Invalid input, please try again.";
+    }
 
-    // input
-    std::cout << "Enter the temperature in celsius degrees: ";
-    std::cin >> temp_celsius;
-
-    // process
-    temp_fahrenheit = (9 / 5) * temp_celsius + 32;
-
-    // output
-    std::cout << "The temperature is " << temp_fahrenheit << "degrees fahrenheit"
-              << std::endl;
+    std::cout << "\n\n\nDone.\n";
 }
 
-main() {
-    // call functions
+int main() {
     fahrenheit();
 }
