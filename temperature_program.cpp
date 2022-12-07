@@ -6,9 +6,6 @@
 
 #include <iostream>
 
-std::string(celsius);
-float celsiusTemp;
-float fahrenheitTemp;
 
 void fahrenheit() {
     // variables to declare
